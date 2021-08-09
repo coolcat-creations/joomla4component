@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<extension type="component" version="3.9" method="upgrade">
+	<name>Joomla4component</name>
+	<!-- The following elements are optional and free of formatting constraints -->
+	<creationDate>2021</creationDate>
+	<!-- Dummy author, feel free to replace anywhere you see it-->
+	<author>COOLCAT creations</author>
+	<authorUrl>https://coolcat-creations.com</authorUrl>
+	<copyright>Elisa Foltyn</copyright>
+	<license>All rights reserved</license>
+	<!--  The version string is recorded in the components table -->
+	<version>0.0.2</version>
+	<!-- The description is optional and defaults to the name -->
+	<description>
+		A Joomla4component Demo Component
+	</description>
+
+	<namespace path="src/">CoolcatCreations\Component\Joomla4component</namespace>
+
+	<files folder="site/">
+		<folder>language</folder>
+		<folder>src</folder>
+		<folder>tmpl</folder>
+	</files>
+
+	<administration>
+		<menu link="index.php?option=com_joomla4component">Joomla4component</menu>
+		<files folder="admin/">
+			<folder>forms</folder>
+			<folder>helpers</folder>
+			<folder>language</folder>
+			<folder>services</folder>
+			<folder>sql</folder>
+			<folder>src</folder>
+			<folder>tmpl</folder>
+		</files>
+
+		<languages>
+			<language tag="en-GB">admin/language/en-GB/en-GB.com_joomla4component.ini</language>
+			<language tag="en-GB">admin/language/en-GB/en-GB.com_joomla4component.sys.ini</language>
+		</languages>
+
+	</administration>
+
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+	<update>
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql</schemapath>
+		</schemas>
+	</update>
+</extension>

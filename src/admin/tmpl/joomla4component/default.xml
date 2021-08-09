@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_JOOMLA4COMPONENT_TITLE">
+		<message>
+			<![CDATA[COM_JOOMLA4COMPONENT_VIEW_DEFAULT_DESC]]>
+		</message>
+	</layout>
+	<!-- Add fields to the request variables for the layout. -->
+	<fields name="request">
+		<fieldset name="request"
+		          addfieldprefix="Joomla\Component\JOOMLA4COMPONENT\Administrator\Field"
+		>
+			<field
+					name="id"
+					type="modal_JOOMLA4COMPONENT"
+					label="COM_JOOMLA4COMPONENT_SELECT_JOOMLA4COMPONENT_LABEL"
+					required="true"
+					select="true"
+					new="true"
+					edit="true"
+					clear="true"
+			/>
+		</fieldset>
+	</fields>
+</metadata>
