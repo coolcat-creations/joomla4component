@@ -31,10 +31,9 @@ class HtmlView extends BaseHtmlView {
      */
 
 
-    function display($tpl = null) {
-	    $this->items         = $this->get('items');
-	    parent::display($tpl);
-    }
+	public function display($template = null) {
+		parent::display($template);
+	}
 
 
 }
