@@ -14,18 +14,19 @@
     ?>
 
     <h1><?= Text::_('COM_JOOMLA4COMPONENT') ?></h1>
+	<?php print_r($this->getModel()->getItems()); ?>
 
-    <?php if($this->items) { ?>
-    <table>
-    <tr>
-    <th>Title</th>
-    <th>Category</th>
-    </tr>
-    <?php foreach ($this->items as $item) : ?>
-    <tr>
-    <td><?php echo $item->title; ?></td>
-    <td><?php echo $item->category; ?></td>
-    </tr>
-    <?php endforeach; ?>
-    </table>
-    <?php }
+<!--    --><?php //if($this->items) { ?>
+<!--    <table>-->
+<!--    <tr>-->
+<!--    <th>Title</th>-->
+<!--    <th>Category</th>-->
+<!--    </tr>-->
+<!--    --><?php //foreach ($this->items as $item) : ?>
+<!--    <tr>-->
+<!--    <td>--><?php //echo $item->title; ?><!--</td>-->
+<!--    <td>--><?php //echo $item->category; ?><!--</td>-->
+<!--    </tr>-->
+<!--    --><?php //endforeach; ?>
+<!--    </table>-->
+<!--    --><?php //}
