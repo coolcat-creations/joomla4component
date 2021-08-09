@@ -80,4 +80,6 @@
 		</update>
 	</updates>
 
+	<dlid prefix="dlid=" suffix="" />
+	
 </extension>
