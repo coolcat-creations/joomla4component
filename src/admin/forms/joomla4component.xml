@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <form>
-	<fieldset addfieldprefix="Joomla\Component\Content\Administrator\Field">
+	<fieldset addfieldprefix="CoolcatCreations\Component\Joomla4component\Administrator\Field">
 		<field
 				name="id"
 				type="text"
