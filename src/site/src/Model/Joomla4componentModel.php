@@ -53,7 +53,7 @@ class Joomla4componentModel extends ListModel
 	}
 
 	/**
-	 * Get a list of Foods.
+	 * Get a list of Items.
 	 *
 	 * @return  array
 	 *
