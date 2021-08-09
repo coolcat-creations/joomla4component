@@ -57,4 +57,27 @@
 			<schemapath type="mysql">sql/updates/mysql</schemapath>
 		</schemas>
 	</update>
+	<updates>
+		<update>
+			<name>com_joomla4component</name>
+			<description>This is com_joomla4component</description>
+			<element>com_joomla4component</element>
+			<type>component</type>
+			<version>0.0.2</version>
+			<changelogurl>https://raw.githubusercontent.com/coolcat-creations/joomla4component/changelog.xml</changelogurl>
+			<infourl title="info">https://github.com/coolcat-creations/joomla4component/blob/v0.0.2/README.md</infourl>
+
+			<downloads>
+				<downloadurl type="full" format="zip">
+					https://github.com/coolcat-creations/joomla4component/releases/download/v0.0.2/com_joomla4component-0.0.2.zip
+				</downloadurl>
+			</downloads>
+
+			<maintainer>Elisa Foltyn</maintainer>
+			<maintainerurl>http://www.coolcat-creations.com</maintainerurl>
+			<targetplatform name="joomla" version="4.*"/>
+			<php_minimum>7.1</php_minimum>
+		</update>
+	</updates>
+
 </extension>
