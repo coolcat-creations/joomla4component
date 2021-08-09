@@ -2,38 +2,37 @@
 
 namespace CoolcatCreations\Component\Joomla4component\Administrator\View\Joomla4component;
 
-defined('_JEXEC') or die;
+\defined('_JEXEC') or die;
 
-use Joomla\CMS\Factory;
-use Joomla\CMS\Helper\ContentHelper;
+
 use Joomla\CMS\MVC\View\HtmlView as BaseHtmlView;
-use Joomla\CMS\Toolbar\Toolbar;
-use Joomla\CMS\Toolbar\ToolbarHelper;
+
 
 /**
- * @package     Joomla.Administrator
- * @subpackage  com_joomla4component
+ * View class for a list of foos.
  *
- * @copyright   Copyright (C) 2020 Elisa Foltyn. All rights reserved.
- * @license     GNU General Public License version 3; see LICENSE
+ * @since  1.0.0
  */
+class HtmlView extends BaseHtmlView
 
-/**
- * Main "Joomla4component" Admin View
- */
-class HtmlView extends BaseHtmlView {
+{
 
-    /**
-     * Display the main "Joomla4component" view
-     *
-     * @param   string  $tpl  The name of the template file to parse; automatically searches through the template paths.
-     * @return  void
-     */
+	/**
+	 * Method to display the view.
+	 *
+	 * @param string $tpl A template file to load. [optional]
+	 *
+	 * @return  void
+	 *
+	 * @since   1.0.0
+	 */
 
+	public function display($tpl = null): void
 
-	public function display($template = null) {
-		parent::display($template);
+	{
+
+		parent::display($tpl);
+
 	}
-
 
 }

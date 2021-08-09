@@ -2,7 +2,7 @@
 
 namespace CoolcatCreations\Component\Joomla4component\Administrator\Controller;
 
-defined('_JEXEC') or die;
+\defined('_JEXEC') or die;
 
 use Joomla\CMS\MVC\Controller\BaseController;
 
@@ -21,22 +21,34 @@ use Joomla\CMS\MVC\Controller\BaseController;
  * @subpackage  com_helloworld
  */
 class DisplayController extends BaseController {
-    /**
-     * The default view for the display method.
-     *
-     * @var string
-     */
-    protected $default_view = 'joomla4component';
 
-    public function display($cachable = false, $urlparams = array()) {
-	    parent::display($cachable);
+	/**
+	 * The default view.
+	 *
+	 * @var    string
+	 * @since  1.0.0
+	 */
 
-	    return $this;
-    }
+	protected $default_view = 'Joomla4component';
 
-	public function getModel($name = 'Joomla4component', $prefix = 'Administrator', $config = array('ignore_request' => true))
+
+	/**
+	 * Method to display a view.
+	 *
+
+	 * @param   boolean  $cachable   If true, the view output will be cached
+	 * @param   array    $urlparams  An array of safe URL parameters and their variable types, for valid values see {@link \JFilterInput::clean()}.
+	 *
+	 * @return  BaseController|bool  This object to support chaining.
+	 *
+	 * @since   1.0.0
+	 *
+	 * @throws  \Exception
+	 */
+
+	public function display($cachable = false, $urlparams = [])
 	{
-		return parent::getModel($name, $prefix, $config);
+		return parent::display();
 	}
 
 }
