@@ -40,25 +40,7 @@ class Joomla4componentModel extends ListModel
 	 *
 	 * @since   1.6
 	 */
-	protected function getStoreId($id = '')
-	{
-		// Compile the store id.
-		$id .= ':' . $this->getState('filter.search');
-		$id .= ':' . $this->getState('filter.tag_search');
-		$id .= ':' . $this->getState('filter.client_id');
-		$id .= ':' . serialize($this->getState('filter.category_id'));
-		$id .= ':' . serialize($this->getState('filter.keywords'));
 
-		return parent::getStoreId($id);
-	}
-
-	/**
-	 * Get a list of Items.
-	 *
-	 * @return  array
-	 *
-	 * @since   1.6
-	 */
 	public function getItems($pk= null): array {
 
 		$items = new \stdClass();

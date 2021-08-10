@@ -14,3 +14,14 @@ defined('_JEXEC') or die;
 <div class="com-foo-category">
 	Test
 </div>
+
+
+<?php
+foreach ($this->items as $i => $item) : ?>
+
+	<?php echo $item->title; ?><br>
+	<?php echo $item->description; ?>
+
+	</br>
+
+<?php endforeach;

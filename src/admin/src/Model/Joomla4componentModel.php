@@ -27,26 +27,46 @@ class Joomla4componentModel extends ListModel
 {
 
 	/**
+	 * Constructor.
+	 *
+	 * @param array $config An optional associative array of configuration settings.
+	 *
+	 * @see     \JControllerLegacy
+	 *
+	 * @since   __BUMP_VERSION__
+	 */
+
+	public function __construct($config = [])
+
+	{
+		parent::__construct($config);
+	}
+
+	/**
 	 * Build an SQL query to load the list data.
 	 *
 	 * @return  \JDatabaseQuery
 	 *
-	 * @since   1.6
+	 * @since   __BUMP_VERSION__
 	 */
+
 	protected function getListQuery()
 	{
 
-		$items = new \stdClass();
+		// Create a new query object.
 
 		$db = $this->getDbo();
 		$query = $db->getQuery(true);
-		$query->from('#__joomla4component');
-		$query->select('*');
-		// Reset the query using our newly populated query object.
-		$db->setQuery($query);
 
-		// Load the results as a list of stdClass objects (see later for more options on retrieving data).
-		$items = $db->loadObjectList();
+		// Select the required fields from the table.
+
+		$query->select(
+			$db->quoteName(['id', 'title', 'description'])
+		);
+
+		$query->from($db->quoteName('#__joomla4component'));
+
+
 		return $query;
 	}
 }
